@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Contents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            width: 50%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Contents in the Uploaded Folder</h1>
+    <ul>
+        {% for file, keywords in data.items() %}
+            <li>
+                <strong>File Name:</strong> {{ file }}<br>
+                <strong>Keywords:</strong> {{ ', '.join(keywords) }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

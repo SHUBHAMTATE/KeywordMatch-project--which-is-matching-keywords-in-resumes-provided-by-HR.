@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+        }
+
+        input[type="text"] {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #fileList {
+            text-align: center;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select .pdf and .docx Files</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf, .docx" multiple>
+        <input type="text" name="keywords" placeholder="Enter Keywords (comma-separated)">
+        <input type="submit" value="Upload Files">
+    </form>
+    <div id="fileList"></div>
+</body>
+</html>
