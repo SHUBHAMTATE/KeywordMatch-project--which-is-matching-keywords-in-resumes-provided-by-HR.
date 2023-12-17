@@ -1,4 +1,4 @@
-
+# Create Function for Readfile 
 def readfile(key):
     import os
     # folder_path = r"C:\Users\Dell\Desktop\HR\uploads"  # Replace with the path to your folder
