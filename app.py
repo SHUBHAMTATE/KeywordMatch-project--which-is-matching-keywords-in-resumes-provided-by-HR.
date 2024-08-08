@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, render_template, flash, redirect, url_for
 from werkzeug.utils import secure_filename
-#app creation
+#app creation 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Replace with a secret key
 
